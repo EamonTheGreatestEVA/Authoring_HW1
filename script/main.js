@@ -51,8 +51,14 @@
     element.addEventListener('click', changeElements, false);
   });
 
-  theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
-  theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
-  theHeading.classList.add('spring');
+  // theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
+  // theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
+  // theHeading.classList.add('spring');
+
+  // more hacky way of doing it
+  // document.querySelector('#spring').click();
+
+  //  more programmy-type way to do the same theHeading
+  changeElements.call(document.querySelector('#spring'));
 
 })();
